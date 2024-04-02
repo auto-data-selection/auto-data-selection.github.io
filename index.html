@@ -171,17 +171,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            To improve language models' proficiency in mathematical reasoning via continual pretraining, 
-            we introduce a novel strategy that leverages base language models for autonomous data selection. 
-            Departing from conventional supervised fine-tuning or trained classifiers with human-annotated data,
-            our approach Autonomous Data Selection (AutoDS) utilizes meta-prompted language models as zero-shot
-            verifiers to autonomously evaluate and select high-quality mathematical content, and we release the 
-            curated open-source AutoMathText dataset encompassing over 200GB of data. To demonstrate the efficacy
-            of our method, we continuously pretrained a 7B-parameter language model on the AutoMathText dataset,
-            achieving substantial improvements in downstream performance on the MATH dataset with a token amount
-            reduced by orders of magnitude compared to previous continuous pretraining works. Our method showcases 
-            a 2 times increase in pretraining token efficiency compared to baselines, underscoring the potential 
-            of our approach in enhancing models' mathematical reasoning capabilities. The AutoMathText dataset 
+            To improve language models’ proficiency in mathematical reasoning via continual pretraining, we introduce a novel strategy that leverages base language
+            models for autonomous data selection. Departing from conventional supervised
+            fine-tuning or trained classifiers with human-annotated data, our approach Autonomous Data Selection (AutoDS) utilizes meta-prompted language models as
+            zero-shot verifiers to evaluate and select high-quality mathematical content autonomously. To demonstrate the efficacy of our method, we continuously pretrained a 7B-parameter language model on our curated dataset, achieving substantial improvements in downstream performance on the MATH, GSM8K, and
+            BIG-Bench Hard (BBH) tasks with a token amount reduced by orders of magnitude compared to previous continual pretraining works. Our method showcases a 2 times increase in pretraining token efficiency compared to state-of-theart baselines, underscoring the potential of our approach in enhancing models’
+            mathematical reasoning capabilities. The AutoMathText dataset 
             is available at <a href="https://huggingface.co/datasets/math-ai/AutoMathText" target="_blank">this link</a>.
           </p>
         </div>
