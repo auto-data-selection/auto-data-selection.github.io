@@ -62,7 +62,7 @@
               <span class="author-block">
                   <a href="" target="">Yang Yuan</a>,</span>
               <span class="author-block">
-                  <a href="" target="">Andrew Chi-Chih Yao</a>,</span>
+                  <a href="" target="">Andrew C Yao</a>,</span>
 
                   </div>
 
@@ -89,7 +89,7 @@
 
                                       <!-- ArXiv abstract Link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/abs/2308.04371" target="_blank"
+                        <a href="https://arxiv.org/abs/2402.07625" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="ai ai-arxiv"></i>
@@ -171,13 +171,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            To improve language models’ proficiency in mathematical reasoning via continual pretraining, we introduce a novel strategy that leverages base language
-            models for autonomous data selection. Departing from conventional supervised
-            fine-tuning or trained classifiers with human-annotated data, our approach Autonomous Data Selection (AutoDS) utilizes meta-prompted language models as
-            zero-shot verifiers to evaluate and select high-quality mathematical content autonomously. To demonstrate the efficacy of our method, we continuously pretrained a 7B-parameter language model on our curated dataset, achieving substantial improvements in downstream performance on the MATH, GSM8K, and
-            BIG-Bench Hard (BBH) tasks with a token amount reduced by orders of magnitude compared to previous continual pretraining works. Our method showcases a 2 times increase in pretraining token efficiency compared to state-of-theart baselines, underscoring the potential of our approach in enhancing models’
-            mathematical reasoning capabilities. The AutoMathText dataset 
-            is available at <a href="https://huggingface.co/datasets/math-ai/AutoMathText" target="_blank">this link</a>.
+            We present Autonomous Data Selection (AutoDS), a method that leverages base language models themselves as zero-shot "generative classifiers" to automatically curate high-quality mathematical texts. 
+            Unlike prior approaches that require human annotations or training a dedicated data filter, AutoDS relies solely on a model's logits to determine whether a given passage is mathematically informative and educational. 
+            By integrating AutoDS into a continual pretraining pipeline, we substantially boost downstream performance on challenging math benchmarks (MATH, GSM8K, and BBH) while using far fewer tokens than previous methods. 
+            Empirically, our approach achieves roughly a twofold improvement in pretraining token efficiency over strong baselines, underscoring the potential of self-directed data selection in enhancing mathematical reasoning. 
+            We release our curated AutoMathText dataset to facilitate future research in automated domain-specific data curation.
+            The AutoMathText dataset is available at <a href="https://huggingface.co/datasets/math-ai/AutoMathText" target="_blank">this link</a>.
           </p>
         </div>
       </div>
@@ -205,7 +204,7 @@
         <h2 class="title is-3">Autonoumous Data Selection</h2>
         <div class="content has-text-justified">
           <p>
-            While the ML research community and the world at large are still focused on manually selecting quality data, we have chosen autonomous data selection (AutoDS), conceptually aligned with RLAIF. In addition, the meta prompting technique, in essence replaces traditional alignment techniques such as DPO and directly deals with the model through its instruction following techniques.
+            While the ML research community and the world at large are still focused on manually selecting quality data, we have chosen autonomous data selection (AutoDS), conceptually aligned with RLAIF. 
           </p>
         </div>
 
@@ -214,25 +213,8 @@
         <h2 class="title is-4">Introduction</h2>
 
         <div class="content has-text-justified">
-          <!-- <p>
-            In this work, we introduce a strategy that utilizes the intrinsic capabilities of base language models,
-            equipped with zero-shot meta-prompts (Reynolds & McDonell, 2021; Zhang et al., 2023b), to autonomously evaluate the mathematical quality and educational value of content. Unlike previous
-            methods that primarily focused on binary classification (Li et al., 2023; Paster et al., 2023), our
-            score function offers a more nuanced and granular analysis. This enables a refined and sophisticated
-            training strategy that extends beyond the limitations of binary filtering.
-          </p> -->
-          <!-- <p>
-            The core of our contribution lies in the autonomous content evaluation without the necessity for
-            alignment with human-labeled scores through Supervised Fine-Tuning (SFT), Reinforcement Learning from Human Feedback (RLHF) (Ouyang et al., 2022), or Direct Preference Optimization
-            (DPO) (Rafailov et al., 2023). By employing a softmax function over logits for ‘YES’ and ‘NO’
-            tokens, our method autonomously assesses content relevance and value. This facilitates an active
-            learning process where the model customizes its learning journey by querying the educational merit
-            of materials. This approach signifies an attempt towards the realization of autonomous learning
-            systems that are dynamic, proactive, and capable of self-directed evaluation and learning, especially
-            in specialized fields like mathematics.
-          </p> -->
           <p>
-          Our contributions can be listed as three-fold:
+          Our contributions can be listed as threefold:
           </p>
           <p>
             1. We showcase the efficacy of leveraging base language models with meta-prompts for zero-shot verification
@@ -418,12 +400,12 @@
       <p>
         Please cite the paper and star this <a href="https://github.com/yifanzhang-pro/AutoMathText" target="_blank">repo</a> if you use AutoMathText or AutoDS and find it interesting/useful, thanks! 
       </p>
-      <pre><code>@article{zhang2024automathtext,
-  title={Autonomous Data Selection with Language Models for Mathematical Texts},
-  author={Zhang, Yifan and Luo, Yifan and Yuan, Yang and Yao, Andrew Chi-Chih},
-  journal={arXiv preprint arXiv:2402.07625},
-  year={2024}
-}</code></pre>
+      <pre><code>@article{zhang2025autonomous,
+  title={Autonomous Data Selection with Zero-shot Generative Classifiers for Mathematical Texts},
+  author={Zhang, Yifan and Luo, Yifan and Yuan, Yang and Yao, Andrew C},
+  journal={The 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025 Findings)},
+  year={2025}
+</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
